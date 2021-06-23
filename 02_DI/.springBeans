@@ -15,6 +15,7 @@
 		<config>src/main/resources/car.xml</config>
 		<config>src/main/resources/baseball.xml</config>
 		<config>src/main/resources/baseball2.xml</config>
+		<config>src/main/resources/map.xml</config>
 	</configs>
 	<autoconfigs>
 		<config>src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml</config>
