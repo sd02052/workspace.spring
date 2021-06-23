@@ -32,8 +32,24 @@ public class HomeController {
 		String formattedDate = dateFormat.format(date);
 		
 		model.addAttribute("serverTime", formattedDate );
+		model.addAttribute("hello", "안녕하세요? 스프링에 오신걸 환영합니다.");
 		
 		return "home";
 	}
 	
+	/*
+	 * 스프링 MVC에서 Model(모델)?
+	 * - 컨트롤러에 의해서 비지니스 로직이 수행이 되고 나면
+	 *   대체적으로 view page에 보여질 정보들이 만들어짐.
+	 *   이러한 정보들을 스프링에서는 Model(모델)이라고 함.
+	 *   이 Model(정보)을 view page로 보내게 됨.
+	 */
+	
+	@RequestMapping("/memberInfo")
+	public String member(Model model) {
+		model.addAttribute("name", "홍길동");
+		model.addAttribute("age", 27);
+		model.addAttribute("addr", "경기도 고양시 일산동구");
+		return "member";
+	}
 }
