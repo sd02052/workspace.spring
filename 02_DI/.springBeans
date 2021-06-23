@@ -12,6 +12,7 @@
 		<config>src/main/resources/mydao.xml</config>
 		<config>src/main/resources/exam1.xml</config>
 		<config>src/main/resources/person.xml</config>
+		<config>src/main/resources/car.xml</config>
 	</configs>
 	<autoconfigs>
 		<config>src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml</config>
