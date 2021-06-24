@@ -1,14 +1,14 @@
-package com.test.nonspring03;
+ï»¿package com.test.nonspring03;
 
 public class ServiceImpl {
 
 	private DAO dao;
 
-	// ±âº» »ı¼ºÀÚ
+	// ê¸°ë³¸ ìƒì„±ì
 	public ServiceImpl() {
 	}
 
-	// ÀÎÀÚ »ı¼ºÀÚ
+	// ì¸ì ìƒì„±ì
 	public ServiceImpl(DAO dao) {
 		this.dao = dao;
 	}
@@ -21,7 +21,7 @@ public class ServiceImpl {
 		this.dao = dao;
 	}
 
-	// ºñÁö´Ï½º ·ÎÁ÷
+	// ë¹„ì§€ë‹ˆìŠ¤ ë¡œì§
 	public void biz() {
 		dao.add();
 	}

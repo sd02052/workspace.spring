@@ -1,9 +1,9 @@
-package com.test.nonspring03;
+ï»¿package com.test.nonspring03;
 
 public class Main {
 	public static void main(String[] args) {
 
-		// ±âÁ¸¿¡ Java, JSP¿¡¼­ »ç¿ëÇÏ´ø ¹æ½Ä
+		// ê¸°ì¡´ì— Java, JSPì—ì„œ ì‚¬ìš©í•˜ë˜ ë°©ì‹
 		MySqlDAO mySqlDAO = new MySqlDAO();
 		mySqlDAO.add();
 
@@ -12,11 +12,11 @@ public class Main {
 
 		System.out.println("========================");
 
-		// 1. »ı¼ºÀÚ¸¦ ÀÌ¿ëÇÏ¿© ÁÖÀÔÇÏ´Â ¹æ¹ı
+		// 1. ìƒì„±ìë¥¼ ì´ìš©í•˜ì—¬ ì£¼ì…í•˜ëŠ” ë°©ë²•
 		ServiceImpl impl1 = new ServiceImpl(new MySqlDAO());
 		impl1.biz();
 
-		// 2. setter() ¸Ş¼­µå¸¦ ÀÌ¿ëÇÏ¿© ÁÖÀÔÇÏ´Â ¹æ¹ı.
+		// 2. setter() ë©”ì„œë“œë¥¼ ì´ìš©í•˜ì—¬ ì£¼ì…í•˜ëŠ” ë°©ë²•.
 		ServiceImpl impl2 = new ServiceImpl();
 		impl2.setDao(new OracleDAO());
 		impl2.biz();

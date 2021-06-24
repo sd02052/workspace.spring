@@ -1,4 +1,4 @@
-package com.sist.di02;
+ï»¿package com.sist.di02;
 
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
@@ -6,14 +6,14 @@ import org.springframework.context.support.GenericXmlApplicationContext;
 public class Main {
 	public static void main(String[] args) {
 
-		// ½ºÇÁ¸µ ÄÁÅ×ÀÌ³Ê °´Ã¼¸¦ »ı¼ºÀ» ÇÔ.
-		// xml ¼³Á¤ ÆÄÀÏÀ» ÀĞ¾îµé¿©¼­ ¸Ş¸ğ¸®·Î ·ÎµùÀÌ µÊ.
+		// ìŠ¤í”„ë§ ì»¨í…Œì´ë„ˆ ê°ì²´ë¥¼ ìƒì„±ì„ í•¨.
+		// xml ì„¤ì • íŒŒì¼ì„ ì½ì–´ë“¤ì—¬ì„œ ë©”ëª¨ë¦¬ë¡œ ë¡œë”©ì´ ë¨.
 		AbstractApplicationContext ctx = new GenericXmlApplicationContext("classpath:exam.xml");
 
 		ExamDAO dao = (ExamDAO) ctx.getBean("daoImpl");
 		dao.printMsg();
 
-		// »ç¿ëµÈ ÀÚ¿øÀ» ¹İ³³
+		// ì‚¬ìš©ëœ ìì›ì„ ë°˜ë‚©
 		ctx.close();
 	}
 }

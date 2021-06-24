@@ -1,14 +1,14 @@
-package com.sist.di03;
+ï»¿package com.sist.di03;
 
 public class OracleDAO implements DAO {
 
 	public OracleDAO() {
-		System.out.println("OracleDAO »ı¼ºÀÚ!");
+		System.out.println("OracleDAO ìƒì„±ì!");
 	}
 
 	@Override
 	public void add() {
-		System.out.println("OracleDAO ¼öÇà@@@@@@@@");
+		System.out.println("OracleDAO ìˆ˜í–‰@@@@@@@@");
 	}
 
 }

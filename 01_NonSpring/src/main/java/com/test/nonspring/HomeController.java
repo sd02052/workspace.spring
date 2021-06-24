@@ -1,4 +1,4 @@
-package com.test.nonspring;
+﻿package com.test.nonspring;
 
 import java.text.DateFormat;
 import java.util.Date;

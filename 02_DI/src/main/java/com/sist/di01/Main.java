@@ -1,4 +1,4 @@
-package com.sist.di01;
+ï»¿package com.sist.di01;
 
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
@@ -15,62 +15,62 @@ public class Main {
 		*/
 		
 		/*
-		 * - ½ºÇÁ¸µÀº °´Ã¼¸¦ »ý¼ºÇÏ°í °¢°¢ÀÇ °´Ã¼¸¦ ¿¬°áÇØ ÁÖ´Â Á¶¸³±â ¿ªÇÒÀ» ÇÔ.
-		 * - ¿©±â¿¡ ÀÖ´Â GenericXmlApplicationContext °´Ã¼°¡ Á¶¸³±â ±â´ÉÀ»
-		 * 	  ±¸ÇöÇÑ Å¬·¡½ºÀÓ.
-		 * - Á¶¸³±â¿¡¼­ »ý¼ºÇÒ °´Ã¼°¡ ¹«¾ùÀÌ°í, °¢ °´Ã¼¸¦ ¾î¶»°Ô ¿¬°áÇÏ´ÂÁö¿¡ ´ëÇÑ Á¤º¸´Â 
-		 * 	  xml ÆÄÀÏ¿¡ ¼³Á¤ÀÌ µÇ¾î ÀÖÀ½.
-		 * - GenericXmlApplicationContext Å¬·¡½º´Â ÀÌ xml ÆÄÀÏ¿¡ Á¤ÀÇµÈ
-		 * 	  ¼³Á¤ Á¤º¸¸¦ ÀÐ¾î ¿Í¼­ °´Ã¼¸¦ »ý¼ºÇÏ°í, °¢°¢ÀÇ °´Ã¼¸¦ ¿¬°áÇÑ µÚ¿¡ ³»ºÎÀûÀ¸·Î
-		 * 	  º¸°üÀ» ÇÔ.
-		 * - xmlÀ» ÀÌ¿ëÇÑ ½ºÇÁ¸µ ¼³Á¤À» ÇÏ´Ù º¸¸é ÄÁÅ×ÀÌ³Ê°¡ »ý¼ºÇÒ °´Ã¼¸¦ ÁöÁ¤ÇÏ±â À§ÇØ
-		 * 	 <bean> ÅÂ±×¸¦ »ç¿ëÇÏ´Â °ÍÀ» º¼ ¼ö ÀÖÀ½.
-		 * - ½ºÇÁ¸µ ÄÁÅ×ÀÌ³Ê°¡ »ý¼ºÇØ¼­ º¸°üÇÏ´Â °´Ã¼¸¦ ½ºÇÁ¸µ ºó(spring bean) °´Ã¼¶ó°í 
-		 * 	  ºÎ¸£¸ç, ÀÏ¹ÝÀûÀ¸·Î ÀÚ¹Ù °´Ã¼¿Í µ¿ÀÏÇÔ.
-		 * - ½ºÇÁ¸µ ÄÁÅ×ÀÌ³Ê´Â »ý¼ºÇÑ ºó °´Ã¼¸¦ <ÀÌ¸§, ºó °´Ã¼> ÀÌ·¸°Ô ½ÖÀ¸·Î º¸°üÀ» ÇÔ.
-		 * - ½ºÇÁ¸µ ÄÁÅ×ÀÌ³Ê°¡ º¸°üÇÏ°í ÀÖ´Â °´Ã¼¸¦ »ç¿ëÇÏ°í ½ÍÀº °æ¿ì ºó °´Ã¼¿Í ¿¬°áµÇ¾î ÀÖ´Â 
-		 * 	  ÀÌ¸§À» ÀÌ¿ëÇØ¼­ °´Ã¼¸¦ ÂüÁ¶ÇÏ°Ô µÊ.
+		 * - ìŠ¤í”„ë§ì€ ê°ì²´ë¥¼ ìƒì„±í•˜ê³  ê°ê°ì˜ ê°ì²´ë¥¼ ì—°ê²°í•´ ì£¼ëŠ” ì¡°ë¦½ê¸° ì—­í• ì„ í•¨.
+		 * - ì—¬ê¸°ì— ìžˆëŠ” GenericXmlApplicationContext ê°ì²´ê°€ ì¡°ë¦½ê¸° ê¸°ëŠ¥ì„
+		 * 	  êµ¬í˜„í•œ í´ëž˜ìŠ¤ìž„.
+		 * - ì¡°ë¦½ê¸°ì—ì„œ ìƒì„±í•  ê°ì²´ê°€ ë¬´ì—‡ì´ê³ , ê° ê°ì²´ë¥¼ ì–´ë–»ê²Œ ì—°ê²°í•˜ëŠ”ì§€ì— ëŒ€í•œ ì •ë³´ëŠ” 
+		 * 	  xml íŒŒì¼ì— ì„¤ì •ì´ ë˜ì–´ ìžˆìŒ.
+		 * - GenericXmlApplicationContext í´ëž˜ìŠ¤ëŠ” ì´ xml íŒŒì¼ì— ì •ì˜ëœ
+		 * 	  ì„¤ì • ì •ë³´ë¥¼ ì½ì–´ ì™€ì„œ ê°ì²´ë¥¼ ìƒì„±í•˜ê³ , ê°ê°ì˜ ê°ì²´ë¥¼ ì—°ê²°í•œ ë’¤ì— ë‚´ë¶€ì ìœ¼ë¡œ
+		 * 	  ë³´ê´€ì„ í•¨.
+		 * - xmlì„ ì´ìš©í•œ ìŠ¤í”„ë§ ì„¤ì •ì„ í•˜ë‹¤ ë³´ë©´ ì»¨í…Œì´ë„ˆê°€ ìƒì„±í•  ê°ì²´ë¥¼ ì§€ì •í•˜ê¸° ìœ„í•´
+		 * 	 <bean> íƒœê·¸ë¥¼ ì‚¬ìš©í•˜ëŠ” ê²ƒì„ ë³¼ ìˆ˜ ìžˆìŒ.
+		 * - ìŠ¤í”„ë§ ì»¨í…Œì´ë„ˆê°€ ìƒì„±í•´ì„œ ë³´ê´€í•˜ëŠ” ê°ì²´ë¥¼ ìŠ¤í”„ë§ ë¹ˆ(spring bean) ê°ì²´ë¼ê³  
+		 * 	  ë¶€ë¥´ë©°, ì¼ë°˜ì ìœ¼ë¡œ ìžë°” ê°ì²´ì™€ ë™ì¼í•¨.
+		 * - ìŠ¤í”„ë§ ì»¨í…Œì´ë„ˆëŠ” ìƒì„±í•œ ë¹ˆ ê°ì²´ë¥¼ <ì´ë¦„, ë¹ˆ ê°ì²´> ì´ë ‡ê²Œ ìŒìœ¼ë¡œ ë³´ê´€ì„ í•¨.
+		 * - ìŠ¤í”„ë§ ì»¨í…Œì´ë„ˆê°€ ë³´ê´€í•˜ê³  ìžˆëŠ” ê°ì²´ë¥¼ ì‚¬ìš©í•˜ê³  ì‹¶ì€ ê²½ìš° ë¹ˆ ê°ì²´ì™€ ì—°ê²°ë˜ì–´ ìžˆëŠ” 
+		 * 	  ì´ë¦„ì„ ì´ìš©í•´ì„œ ê°ì²´ë¥¼ ì°¸ì¡°í•˜ê²Œ ë¨.
 		 */
 		
 		/*
-		 * ½ºÇÁ¸µ ÄÁÅ×ÀÌ³ÊÀÇ Á¾·ù
-		 * - BeanFactory : ´Ü¼øÈ÷ ½ºÇÁ¸µ ÄÁÅ×ÀÌ³Ê¿¡¼­ °´Ã¼¸¦ »ý¼ºÇÏ°í DI¸¸ Ã³¸®ÇØ ÁÖ´Â
-		 * 					±â´É¸¸À» Á¦°øÇØ ÁÖ´Â °´Ã¼.
-		 * 					ÇÏÁö¸¸ ½ºÇÁ¸µÀ» »ç¿ëÇÏ´Â ÀÌÀ¯´Â ´Ü¼øÈ÷ DI¸¸ »ç¿ëÇÏ±â À§ÇÔÀÌ ¾Æ´Ô.
-		 * 					½ºÇÁ¸µÀ» »ç¿ëÇÏ´Â ´Ù¾çÇÑ ºÎ°¡ ±â´É(Æ®·£Àè¼Ç Ã³¸®, ÀÚ¹Ù ÄÚµå ±â¹ÝÀÇ
-		 * 					½ºÇÁ¸µ ¼³Á¤, ¾Ö³ëÅ×ÀÌ¼ÇÀ» ÀÌ¿ëÇÑ ºó ¼³Á¤, ½ºÇÁ¸µÀ» ÀÌ¿ëÇÑ
-		 * 					À¥ °³¹ß µîµî) ¶§¹®ÀÎµ¥ ÀÌ·¯ÇÑ ºÎ°¡ÀûÀÎ ±â´ÉÀ» »ç¿ëÇÏ±â À§ÇØ¼­´Â 
-		 * 					ApplicationContext °´Ã¼¸¦ ÁÖ·Î »ç¿ëÇÏ°Ô µÊ.
-		 * - AbstractApplicationContext : ÄÁÅ×ÀÌ³Ê Á¾·á(close)¿Í °°Àº ±â´ÉÀ» Á¦°øÇØ ÁÖ´Â °´Ã¼.
-		 * - GenericXmlApplicationContext : AbstractApplicationContext °´Ã¼¸¦
-		 *                                 »ó¼ÓÀ» ¹Þ¾Æ¼­ ¸¸µé¾îÁø Å¬·¡½º·Î¼­ xml ÆÄÀÏ¿¡¼­
-		 *                                 ½ºÇÁ¸µ ºó ¼³Á¤ Á¤º¸¸¦ ÀÐ¾î ¿À´Â ¿ªÇÒÀ» ÇÔ. 
-		 * - GenericXmlApplicationContext °´Ã¼¸¦ »ý¼ºÇÒ ¶§ ÆÄ¶ó¹ÌÅÍ °ªÀ¸·Î 
-		 *   "classpath:getsum.xml" À» Àü´ÞÇß´Âµ¥ ÀÌ´Â Å¬·¡½º ÆÐ½º¿¡ À§Ä¡ÇÑ xml ÆÄÀÏÀ»
-		 *   ¼³Á¤ ÆÄÀÏ·Î »ç¿ëÇÑ´Ù´Â ÀÇ¹ÌÀÓ.
-		 * - GenericXmlApplicationContext °´Ã¼´Â Àü´Þ¹ÞÀº xml ÆÄÀÏ¿¡¼­ ¼³Á¤ Á¤º¸¸¦ 
-		 *   ÀÐ¾î ¿Í¼­ ½ºÇÁ¸µ ºó °´Ã¼¸¦ »ý¼ºÇÏ°í ÇÁ·ÎÆÛÆ¼ °ªÀ» ¼³Á¤À» ÇØ ÁÜ.
-		 *   ÀÌ·¸°Ô »ý¼ºµÈ ½ºÇÁ¸µ ºó °´Ã¼´Â getBean() ÀÌ¶ó´Â ¸Þ¼­µå¸¦ »ç¿ëÇØ¼­ ±¸ÇöÇÒ ¼ö ÀÖÀ½.
-		 *   getBean() ¸Þ¼­µåÀÇ Ã¹¹øÂ° ÆÄ¶ó¹ÌÅÍ´Â ±¸ÇöÇÏ°íÀÚ ÇÏ´Â ½ºÇÁ¸µ ºó °´Ã¼ÀÇ °íÀ¯ÇÑ id
-		 *   ÀÌ¸§ÀÌ¸ç, µÎ¹øÂ° ÆÄ¶ó¹ÌÅÍ´Â Å¬·¡½º Å¸ÀÔÀ» ÀÇ¹ÌÇÔ.
+		 * ìŠ¤í”„ë§ ì»¨í…Œì´ë„ˆì˜ ì¢…ë¥˜
+		 * - BeanFactory : ë‹¨ìˆœížˆ ìŠ¤í”„ë§ ì»¨í…Œì´ë„ˆì—ì„œ ê°ì²´ë¥¼ ìƒì„±í•˜ê³  DIë§Œ ì²˜ë¦¬í•´ ì£¼ëŠ”
+		 * 					ê¸°ëŠ¥ë§Œì„ ì œê³µí•´ ì£¼ëŠ” ê°ì²´.
+		 * 					í•˜ì§€ë§Œ ìŠ¤í”„ë§ì„ ì‚¬ìš©í•˜ëŠ” ì´ìœ ëŠ” ë‹¨ìˆœížˆ DIë§Œ ì‚¬ìš©í•˜ê¸° ìœ„í•¨ì´ ì•„ë‹˜.
+		 * 					ìŠ¤í”„ë§ì„ ì‚¬ìš©í•˜ëŠ” ë‹¤ì–‘í•œ ë¶€ê°€ ê¸°ëŠ¥(íŠ¸ëžœìž­ì…˜ ì²˜ë¦¬, ìžë°” ì½”ë“œ ê¸°ë°˜ì˜
+		 * 					ìŠ¤í”„ë§ ì„¤ì •, ì• ë…¸í…Œì´ì…˜ì„ ì´ìš©í•œ ë¹ˆ ì„¤ì •, ìŠ¤í”„ë§ì„ ì´ìš©í•œ
+		 * 					ì›¹ ê°œë°œ ë“±ë“±) ë•Œë¬¸ì¸ë° ì´ëŸ¬í•œ ë¶€ê°€ì ì¸ ê¸°ëŠ¥ì„ ì‚¬ìš©í•˜ê¸° ìœ„í•´ì„œëŠ” 
+		 * 					ApplicationContext ê°ì²´ë¥¼ ì£¼ë¡œ ì‚¬ìš©í•˜ê²Œ ë¨.
+		 * - AbstractApplicationContext : ì»¨í…Œì´ë„ˆ ì¢…ë£Œ(close)ì™€ ê°™ì€ ê¸°ëŠ¥ì„ ì œê³µí•´ ì£¼ëŠ” ê°ì²´.
+		 * - GenericXmlApplicationContext : AbstractApplicationContext ê°ì²´ë¥¼
+		 *                                 ìƒì†ì„ ë°›ì•„ì„œ ë§Œë“¤ì–´ì§„ í´ëž˜ìŠ¤ë¡œì„œ xml íŒŒì¼ì—ì„œ
+		 *                                 ìŠ¤í”„ë§ ë¹ˆ ì„¤ì • ì •ë³´ë¥¼ ì½ì–´ ì˜¤ëŠ” ì—­í• ì„ í•¨. 
+		 * - GenericXmlApplicationContext ê°ì²´ë¥¼ ìƒì„±í•  ë•Œ íŒŒë¼ë¯¸í„° ê°’ìœ¼ë¡œ 
+		 *   "classpath:getsum.xml" ì„ ì „ë‹¬í–ˆëŠ”ë° ì´ëŠ” í´ëž˜ìŠ¤ íŒ¨ìŠ¤ì— ìœ„ì¹˜í•œ xml íŒŒì¼ì„
+		 *   ì„¤ì • íŒŒì¼ë¡œ ì‚¬ìš©í•œë‹¤ëŠ” ì˜ë¯¸ìž„.
+		 * - GenericXmlApplicationContext ê°ì²´ëŠ” ì „ë‹¬ë°›ì€ xml íŒŒì¼ì—ì„œ ì„¤ì • ì •ë³´ë¥¼ 
+		 *   ì½ì–´ ì™€ì„œ ìŠ¤í”„ë§ ë¹ˆ ê°ì²´ë¥¼ ìƒì„±í•˜ê³  í”„ë¡œí¼í‹° ê°’ì„ ì„¤ì •ì„ í•´ ì¤Œ.
+		 *   ì´ë ‡ê²Œ ìƒì„±ëœ ìŠ¤í”„ë§ ë¹ˆ ê°ì²´ëŠ” getBean() ì´ë¼ëŠ” ë©”ì„œë“œë¥¼ ì‚¬ìš©í•´ì„œ êµ¬í˜„í•  ìˆ˜ ìžˆìŒ.
+		 *   getBean() ë©”ì„œë“œì˜ ì²«ë²ˆì§¸ íŒŒë¼ë¯¸í„°ëŠ” êµ¬í˜„í•˜ê³ ìž í•˜ëŠ” ìŠ¤í”„ë§ ë¹ˆ ê°ì²´ì˜ ê³ ìœ í•œ id
+		 *   ì´ë¦„ì´ë©°, ë‘ë²ˆì§¸ íŒŒë¼ë¯¸í„°ëŠ” í´ëž˜ìŠ¤ íƒ€ìž…ì„ ì˜ë¯¸í•¨.
 		 */
 		
 		/*
-		 * - DI Áï, ÁÖÀÔÀ» ¾î¶»°Ô ÇÒ °ÍÀÎÁö´Â xml ¹®¼­¿¡ ±âÀÔÀÌ µÇ¾î ÀÖÀ½.
-		 * - ½ºÇÁ¸µ ÄÁÅ×ÀÌ³ÊÀÎ ctx°¡ "classpath:getsum.xml" ÆÄÀÏÀ» º¸°í
-		 * 	DI¸¦ ÁøÇàÇÔ.
-		 * - getsum.xml ÆÄÀÏÀº resources Æú´õ¿¡ µé¾î°¡ ÀÖ¾î¾ß ÇÔ.
+		 * - DI ì¦‰, ì£¼ìž…ì„ ì–´ë–»ê²Œ í•  ê²ƒì¸ì§€ëŠ” xml ë¬¸ì„œì— ê¸°ìž…ì´ ë˜ì–´ ìžˆìŒ.
+		 * - ìŠ¤í”„ë§ ì»¨í…Œì´ë„ˆì¸ ctxê°€ "classpath:getsum.xml" íŒŒì¼ì„ ë³´ê³ 
+		 * 	DIë¥¼ ì§„í–‰í•¨.
+		 * - getsum.xml íŒŒì¼ì€ resources í´ë”ì— ë“¤ì–´ê°€ ìžˆì–´ì•¼ í•¨.
 		 * 
-		 * - AbstractApplicationContext °´Ã¼°¡ DI ÀÛ¾÷À» ÇØ ÁÖ´Â ½ºÇÁ¸µ ÄÁÅ×ÀÌ³Ê.
-		 * - ½ºÇÁ¸µ ÄÁÅ×ÀÌ³Ê °´Ã¼¸¦ »ý¼ºÇÏ°Ô µÊ.
-		 * - xml ÆÄÀÏÀ» ÀÌ¿ëÇÏ¿© ¸Þ¸ð¸®·Î ½ºÇÁ¸µ ÄÁÅ×ÀÌ³Ê °´Ã¼°¡ »ý¼ºÀÌ µÊ. (¸Þ¸ð¸®·Î ·Îµù)
+		 * - AbstractApplicationContext ê°ì²´ê°€ DI ìž‘ì—…ì„ í•´ ì£¼ëŠ” ìŠ¤í”„ë§ ì»¨í…Œì´ë„ˆ.
+		 * - ìŠ¤í”„ë§ ì»¨í…Œì´ë„ˆ ê°ì²´ë¥¼ ìƒì„±í•˜ê²Œ ë¨.
+		 * - xml íŒŒì¼ì„ ì´ìš©í•˜ì—¬ ë©”ëª¨ë¦¬ë¡œ ìŠ¤í”„ë§ ì»¨í…Œì´ë„ˆ ê°ì²´ê°€ ìƒì„±ì´ ë¨. (ë©”ëª¨ë¦¬ë¡œ ë¡œë”©)
 		 */
 		
 		AbstractApplicationContext ctx = new GenericXmlApplicationContext("classpath:getsum.xml");
 		
 		/*
-		 * - ½ÇÁ¦ÀûÀ¸·Î ÀÌ ÄÚµå¿¡¼­ ÁÖÀÔ °úÁ¤ÀÌ ÀÏ¾î³ª°Ô µÈ´Ù.
-		 * - new Å°¿öµå¸¦ »ç¿ëÇÏÁö ¾Ê°í Á÷Á¢ ½ºÇÁ¸µ ÄÁÅ×ÀÌ³Ê¿¡¼­ ²¨³»¼­ »ç¿ëÇÔ.
+		 * - ì‹¤ì œì ìœ¼ë¡œ ì´ ì½”ë“œì—ì„œ ì£¼ìž… ê³¼ì •ì´ ì¼ì–´ë‚˜ê²Œ ëœë‹¤.
+		 * - new í‚¤ì›Œë“œë¥¼ ì‚¬ìš©í•˜ì§€ ì•Šê³  ì§ì ‘ ìŠ¤í”„ë§ ì»¨í…Œì´ë„ˆì—ì„œ êº¼ë‚´ì„œ ì‚¬ìš©í•¨.
 		 */
 		// MyGetSum my = (MyGetSum) ctx.getBean("mySum");
 		MyGetSum my = ctx.getBean("mySum",MyGetSum.class);
@@ -78,7 +78,7 @@ public class Main {
 		
 		my.sum();
 		
-		// »ç¿ëÀ» ÇßÀ¸¸é ¹Ý³³À» ÇØ¾ß ÇÔ.
+		// ì‚¬ìš©ì„ í–ˆìœ¼ë©´ ë°˜ë‚©ì„ í•´ì•¼ í•¨.
 		ctx.close();
 		
 	}

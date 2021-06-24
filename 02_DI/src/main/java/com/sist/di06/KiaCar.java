@@ -1,10 +1,10 @@
-package com.sist.di06;
+ï»¿package com.sist.di06;
 
 public class KiaCar implements Car {
 
 	@Override
 	public void drive() {
-		System.out.println("±â¾ÆÂ÷¸¦ ¿îÀüÇÕ´Ï´Ù!!!!!!!!!!!!!!!!!!");
+		System.out.println("ê¸°ì•„ì°¨ë¥¼ ìš´ì „í•©ë‹ˆë‹¤!!!!!!!!!!!!!!!!!!");
 	}
 
 }

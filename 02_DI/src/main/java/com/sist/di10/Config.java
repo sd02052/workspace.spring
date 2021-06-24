@@ -1,4 +1,4 @@
-package com.sist.di10;
+ï»¿package com.sist.di10;
 
 import java.util.ArrayList;
 
@@ -6,23 +6,23 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /*
- * DI ¼³Á¤ ½Ã Java ÄÚµå¿¡¼­ ¾Ö³ëÅ×ÀÌ¼ÇÀ» ¼³Á¤ÇÏ¿© 
- * ÁÖÀÔÇÏ´Â ¹æ¹ı.
+ * DI ì„¤ì • ì‹œ Java ì½”ë“œì—ì„œ ì• ë…¸í…Œì´ì…˜ì„ ì„¤ì •í•˜ì—¬ 
+ * ì£¼ì…í•˜ëŠ” ë°©ë²•.
  * 
- * - ¼³Á¤ ½Ã cglib ¶óÀÌºê·¯¸®°¡ ¹İµå½Ã ÇÊ¿äÇÔ.
- * 		==> pom.xml ÆÄÀÏ¿¡ ¶óÀÌºê·¯¸®¸¦ Ãß°¡ÇØ ÁÖ¾î¾ß ÇÔ.
- * - @Configuration, @Bean ¾Ö³ëÅ×ÀÌ¼ÇÀ» »ç¿ëÇÔ.
+ * - ì„¤ì • ì‹œ cglib ë¼ì´ë¸ŒëŸ¬ë¦¬ê°€ ë°˜ë“œì‹œ í•„ìš”í•¨.
+ * 		==> pom.xml íŒŒì¼ì— ë¼ì´ë¸ŒëŸ¬ë¦¬ë¥¼ ì¶”ê°€í•´ ì£¼ì–´ì•¼ í•¨.
+ * - @Configuration, @Bean ì• ë…¸í…Œì´ì…˜ì„ ì‚¬ìš©í•¨.
  * 
- * - @Configuration : - Å¬·¡½º ¾Õ¿¡ ¼±¾ğÇÏ´Â ¾Ö³ëÅ×ÀÌ¼Ç.
- *                    - "ÇØ´ç Å¬·¡½º´Â ½ºÇÁ¸µ ¼³Á¤¿¡ »ç¿ëµÇ´Â Å¬·¡½ºÀÔ´Ï´Ù"
- *                      ¶ó°í ¾Ë·ÁÁÖ´Â ¾Ö³ëÅ×ÀÌ¼Ç
- * - @Bean : ¸Ş¼­µå ¾Õ¿¡ »ç¿ëµÇ´Â ¾Ö³ëÅ×ÀÌ¼Ç.
- *           "ÇØ´ç ¸Ş¼­µå´Â °´Ã¼¸¦ »ı¼ºÇÏ´Âµ¥ »ç¿ë" µÈ´Ù´Â ÀÇ¹Ì.
+ * - @Configuration : - í´ë˜ìŠ¤ ì•ì— ì„ ì–¸í•˜ëŠ” ì• ë…¸í…Œì´ì…˜.
+ *                    - "í•´ë‹¹ í´ë˜ìŠ¤ëŠ” ìŠ¤í”„ë§ ì„¤ì •ì— ì‚¬ìš©ë˜ëŠ” í´ë˜ìŠ¤ì…ë‹ˆë‹¤"
+ *                      ë¼ê³  ì•Œë ¤ì£¼ëŠ” ì• ë…¸í…Œì´ì…˜
+ * - @Bean : ë©”ì„œë“œ ì•ì— ì‚¬ìš©ë˜ëŠ” ì• ë…¸í…Œì´ì…˜.
+ *           "í•´ë‹¹ ë©”ì„œë“œëŠ” ê°ì²´ë¥¼ ìƒì„±í•˜ëŠ”ë° ì‚¬ìš©" ëœë‹¤ëŠ” ì˜ë¯¸.
  *           
- * - ¾Ö³ëÅ×ÀÌ¼ÇÀÇ ¿ªÇÒ
- *  * ÄÄÆÄÀÏ·¯¿¡°Ô Á¤º¸¸¦ ¾Ë·ÁÁÖ´Â ¿ªÇÒ.
- *  * ÄÄÆÄÀÏ ÇÒ ¶§¿Í ¼³Ä¡ ½ÃÀÇ ÀÛ¾÷À» ÁöÁ¤ÇÏ´Â ¿ªÇÒ.
- *  * ½ÇÇàÇÒ ¶§¿¡ º°µµÀÇ Ã³¸®°¡ ÇÊ¿äÇÑ °æ¿ì »ç¿ëµÇ´Â ¿ªÇÒ.
+ * - ì• ë…¸í…Œì´ì…˜ì˜ ì—­í• 
+ *  * ì»´íŒŒì¼ëŸ¬ì—ê²Œ ì •ë³´ë¥¼ ì•Œë ¤ì£¼ëŠ” ì—­í• .
+ *  * ì»´íŒŒì¼ í•  ë•Œì™€ ì„¤ì¹˜ ì‹œì˜ ì‘ì—…ì„ ì§€ì •í•˜ëŠ” ì—­í• .
+ *  * ì‹¤í–‰í•  ë•Œì— ë³„ë„ì˜ ì²˜ë¦¬ê°€ í•„ìš”í•œ ê²½ìš° ì‚¬ìš©ë˜ëŠ” ì—­í• .
  */
 
 @Configuration
@@ -30,10 +30,10 @@ public class Config {
 	@Bean
 	public Player player1() {
 		ArrayList<String> position = new ArrayList<String>();
-		position.add("4¹ø Å¸ÀÚ");
-		position.add("1·ç¼ö");
+		position.add("4ë²ˆ íƒ€ì");
+		position.add("1ë£¨ìˆ˜");
 
-		Player player = new Player("Ãß½Å¼ö", 38, position);
+		Player player = new Player("ì¶”ì‹ ìˆ˜", 38, position);
 
 		player.setWeight(100);
 		player.setHeight(188);
@@ -44,10 +44,10 @@ public class Config {
 	@Bean
 	public Player player2() {
 		ArrayList<String> position = new ArrayList<String>();
-		position.add("9¹ø Å¸ÀÚ");
-		position.add("Åõ¼ö");
+		position.add("9ë²ˆ íƒ€ì");
+		position.add("íˆ¬ìˆ˜");
 
-		Player player = new Player("·ùÇöÁø", 33, position);
+		Player player = new Player("ë¥˜í˜„ì§„", 33, position);
 
 		player.setWeight(120);
 		player.setHeight(190);

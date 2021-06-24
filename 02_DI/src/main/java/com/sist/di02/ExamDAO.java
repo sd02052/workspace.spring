@@ -1,6 +1,6 @@
-package com.sist.di02;
+ï»¿package com.sist.di02;
 
 public interface ExamDAO {
 
-	void printMsg(); // Ãß»ó ¸Ş¼­µå
+	void printMsg(); // ì¶”ìƒ ë©”ì„œë“œ
 }

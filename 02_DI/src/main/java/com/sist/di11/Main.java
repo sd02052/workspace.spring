@@ -1,4 +1,4 @@
-package com.sist.di11;
+ï»¿package com.sist.di11;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
@@ -10,27 +10,27 @@ public class Main {
 		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(Config.class);
 
 		Player player1 = (Player) ctx.getBean("player1");
-		System.out.println("ÀÌ¸§ : " + player1.getName());
-		System.out.println("³ªÀÌ : " + player1.getAge());
-		System.out.println("Æ÷Áö¼Ç : " + player1.getPosition());
-		System.out.println("Ã¼Áß : " + player1.getWeight());
-		System.out.println("Å° : " + player1.getHeight());
+		System.out.println("ì´ë¦„ : " + player1.getName());
+		System.out.println("ë‚˜ì´ : " + player1.getAge());
+		System.out.println("í¬ì§€ì…˜ : " + player1.getPosition());
+		System.out.println("ì²´ì¤‘ : " + player1.getWeight());
+		System.out.println("í‚¤ : " + player1.getHeight());
 		System.out.println("===================================================");
 
 		Player player2 = (Player) ctx.getBean("player2");
-		System.out.println("ÀÌ¸§ : " + player2.getName());
-		System.out.println("³ªÀÌ : " + player2.getAge());
-		System.out.println("Æ÷Áö¼Ç : " + player2.getPosition());
-		System.out.println("Ã¼Áß : " + player2.getWeight());
-		System.out.println("Å° : " + player2.getHeight());
+		System.out.println("ì´ë¦„ : " + player2.getName());
+		System.out.println("ë‚˜ì´ : " + player2.getAge());
+		System.out.println("í¬ì§€ì…˜ : " + player2.getPosition());
+		System.out.println("ì²´ì¤‘ : " + player2.getWeight());
+		System.out.println("í‚¤ : " + player2.getHeight());
 		System.out.println("===================================================");
 
 		Player player3 = (Player) ctx.getBean("player3");
-		System.out.println("ÀÌ¸§ : " + player3.getName());
-		System.out.println("³ªÀÌ : " + player3.getAge());
-		System.out.println("Æ÷Áö¼Ç : " + player3.getPosition());
-		System.out.println("Ã¼Áß : " + player3.getWeight());
-		System.out.println("Å° : " + player3.getHeight());
+		System.out.println("ì´ë¦„ : " + player3.getName());
+		System.out.println("ë‚˜ì´ : " + player3.getAge());
+		System.out.println("í¬ì§€ì…˜ : " + player3.getPosition());
+		System.out.println("ì²´ì¤‘ : " + player3.getWeight());
+		System.out.println("í‚¤ : " + player3.getHeight());
 		System.out.println("===================================================");
 		ctx.close();
 	}

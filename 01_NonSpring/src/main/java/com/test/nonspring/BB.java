@@ -1,7 +1,7 @@
-package com.test.nonspring;
+ï»¿package com.test.nonspring;
 
 public class BB {
 	public void printMsg() {
-		System.out.println("¾È³çÇÏ¼¼¿ä!!!");
+		System.out.println("ì•ˆë…•í•˜ì„¸ìš”!!!");
 	}
 }

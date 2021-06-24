@@ -1,14 +1,14 @@
-package com.sist.di03;
+ï»¿package com.sist.di03;
 
 public class MysqlDAO implements DAO {
 
 	public MysqlDAO() {
-		System.out.println("MysqlDAO »ı¼ºÀÚ!");
+		System.out.println("MysqlDAO ìƒì„±ì!");
 	}
 
 	@Override
 	public void add() {
-		System.out.println("MysqlDAO ¼öÇà@@@@@");
+		System.out.println("MysqlDAO ìˆ˜í–‰@@@@@");
 	}
 
 }

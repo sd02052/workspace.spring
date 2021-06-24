@@ -1,4 +1,4 @@
-package com.sist.di01;
+ï»¿package com.sist.di01;
 
 public class GetSum {
 
@@ -21,9 +21,9 @@ public class GetSum {
 		this.num2 = num2;
 	}
 
-	// ÇÙ½ÉÀûÀÎ ±â´É(ºñÁö´Ï½º ·ÎÁ÷)
+	// í•µì‹¬ì ì¸ ê¸°ëŠ¥(ë¹„ì§€ë‹ˆìŠ¤ ë¡œì§)
 	public void hap(int num1, int num2) {
-		System.out.println("´õÇÏ±â >>> " + (num1 + num2));
+		System.out.println("ë”í•˜ê¸° >>> " + (num1 + num2));
 	}
 
 }

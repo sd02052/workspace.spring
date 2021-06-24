@@ -1,4 +1,4 @@
-package com.sist.di07;
+ï»¿package com.sist.di07;
 
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
@@ -16,28 +16,28 @@ public class Main {
 		System.out.println("===================================================");
 
 		Player player2 = (Player) ctx.getBean("player2");
-		System.out.println("ÀÌ¸§: " + player2.getName());
-		System.out.println("³ªÀÌ: " + player2.getAge());
-		System.out.println("Æ÷Áö¼Ç: " + player2.getPosition());
-		System.out.println("Ã¼Áß: " + player2.getWeight());
-		System.out.println("Å°: " + player2.getHeight());
+		System.out.println("ì´ë¦„: " + player2.getName());
+		System.out.println("ë‚˜ì´: " + player2.getAge());
+		System.out.println("í¬ì§€ì…˜: " + player2.getPosition());
+		System.out.println("ì²´ì¤‘: " + player2.getWeight());
+		System.out.println("í‚¤: " + player2.getHeight());
 		System.out.println("===================================================");
 
 		Player player3 = (Player) ctx.getBean("player3");
-		System.out.println("ÀÌ¸§: " + player3.getName());
-		System.out.println("³ªÀÌ: " + player3.getAge());
-		System.out.println("Æ÷Áö¼Ç: " + player3.getPosition());
-		System.out.println("Ã¼Áß: " + player3.getWeight());
-		System.out.println("Å°: " + player3.getHeight());
+		System.out.println("ì´ë¦„: " + player3.getName());
+		System.out.println("ë‚˜ì´: " + player3.getAge());
+		System.out.println("í¬ì§€ì…˜: " + player3.getPosition());
+		System.out.println("ì²´ì¤‘: " + player3.getWeight());
+		System.out.println("í‚¤: " + player3.getHeight());
 		System.out.println("===================================================");
 
 		BaseballTeam team = (BaseballTeam) ctx.getBean("team");
-		System.out.println(":::::±¹°¡´ëÇ¥ ¾ß±¸ ¼±¼ö´Ü:::::");
-		System.out.println("°¨µ¶: " + team.getManager());
-		System.out.println("Å¸ÀÚÄÚÄ¡: " + team.getBattingCoach());
-		System.out.println("Åõ¼öÄÚÄ¡ : " + team.getPitcherCoach());
-		System.out.println("4¹øÅ¸ÀÚ: " + team.getHitter());
-		System.out.println("¼±¹ßÅõ¼ö: " + team.getPitcher());
+		System.out.println(":::::êµ­ê°€ëŒ€í‘œ ì•¼êµ¬ ì„ ìˆ˜ë‹¨:::::");
+		System.out.println("ê°ë…: " + team.getManager());
+		System.out.println("íƒ€ìì½”ì¹˜: " + team.getBattingCoach());
+		System.out.println("íˆ¬ìˆ˜ì½”ì¹˜ : " + team.getPitcherCoach());
+		System.out.println("4ë²ˆíƒ€ì: " + team.getHitter());
+		System.out.println("ì„ ë°œíˆ¬ìˆ˜: " + team.getPitcher());
 		
 		ctx.close();
 	}

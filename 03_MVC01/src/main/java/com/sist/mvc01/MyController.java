@@ -1,4 +1,4 @@
-package com.sist.mvc01;
+ï»¿package com.sist.mvc01;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,19 +8,19 @@ import org.springframework.web.servlet.ModelAndView;
 public class MyController {
 
 	/*
-	 * ModelAndView °´Ã¼¶õ?
-	 * - ModelAndView °´Ã¼´Â ÄÁÆ®·Ñ·¯¿¡ ÀÇÇØ¼­
-	 *   ºñÁö´Ï½º ·ÎÁ÷ÀÌ ¼öÇàÀÌ µÇ°í ³ª¸é ´ëÃ¼ÀûÀ¸·Î 
-	 *   »ç¿ëÀÚ¿¡°Ô ¹İÈ¯µÇ¾î ºê¶ó¿ìÀú¿¡ º¸¿©Áú Á¤º¸µéÀÌ ¸¸µé¾îÁø´Ù.
-	 *   ÀÌ ¶§ ¸¸µé¾îÁø Á¤º¸¸¦ view page·Î ³Ñ°ÜÁÙ ¶§
-	 *   ÀÀ´äÀ» ÇÒ view page Á¤º¸¿Í Àü´ŞÇÒ °ªÀ» 
-	 *   ÇÑ²¨¹ø¿¡ ÀúÀåÇÏ¿© ³Ñ°ÜÁÙ ¶§ »ç¿ëÇÔ.
+	 * ModelAndView ê°ì²´ë€?
+	 * - ModelAndView ê°ì²´ëŠ” ì»¨íŠ¸ë¡¤ëŸ¬ì— ì˜í•´ì„œ
+	 *   ë¹„ì§€ë‹ˆìŠ¤ ë¡œì§ì´ ìˆ˜í–‰ì´ ë˜ê³  ë‚˜ë©´ ëŒ€ì²´ì ìœ¼ë¡œ 
+	 *   ì‚¬ìš©ìì—ê²Œ ë°˜í™˜ë˜ì–´ ë¸Œë¼ìš°ì €ì— ë³´ì—¬ì§ˆ ì •ë³´ë“¤ì´ ë§Œë“¤ì–´ì§„ë‹¤.
+	 *   ì´ ë•Œ ë§Œë“¤ì–´ì§„ ì •ë³´ë¥¼ view pageë¡œ ë„˜ê²¨ì¤„ ë•Œ
+	 *   ì‘ë‹µì„ í•  view page ì •ë³´ì™€ ì „ë‹¬í•  ê°’ì„ 
+	 *   í•œêº¼ë²ˆì— ì €ì¥í•˜ì—¬ ë„˜ê²¨ì¤„ ë•Œ ì‚¬ìš©í•¨.
 	 */
 	@RequestMapping("/info")
 	public ModelAndView aaa() {
 		ModelAndView mav = new ModelAndView();
 		
-		mav.addObject("email", "hong@naver.com"); // Á¤º¸(Model) ÀúÀå
+		mav.addObject("email", "hong@naver.com"); // ì •ë³´(Model) ì €ì¥
 		mav.setViewName("member/email");
 		
 		return mav;

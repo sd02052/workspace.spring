@@ -1,4 +1,4 @@
-package com.sist.di03;
+ï»¿package com.sist.di03;
 
 public class ServiceImpl {
 
@@ -8,11 +8,11 @@ public class ServiceImpl {
 		return dao;
 	}
 
-	public void setDao(DAO dao) { // OracleDAO, MysqlDAO µÑ´Ù ¿Ã ¼ö ÀÖ´Ù.(´ÙÇü¼º)
+	public void setDao(DAO dao) { // OracleDAO, MysqlDAO ë‘˜ë‹¤ ì˜¬ ìˆ˜ ìˆë‹¤.(ë‹¤í˜•ì„±)
 		this.dao = dao;
 	}
 
-	// ºñÁö´Ï½º ·ÎÁ÷
+	// ë¹„ì§€ë‹ˆìŠ¤ ë¡œì§
 	public void biz() {
 		dao.add();
 	}

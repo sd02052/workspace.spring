@@ -1,4 +1,4 @@
-package com.sist.di04;
+ï»¿package com.sist.di04;
 
 import lombok.Data;
 
@@ -7,7 +7,7 @@ public class Exam {
 
 	private String msg;
 
-	public Exam() { // ±âº» »ý¼ºÀÚ
+	public Exam() { // ê¸°ë³¸ ìƒì„±ìž
 
 	}
 
@@ -15,8 +15,8 @@ public class Exam {
 		this.msg = msg;
 	}
 
-	// ºñÁö´Ï½º ·ÎÁ÷
+	// ë¹„ì§€ë‹ˆìŠ¤ ë¡œì§
 	public void output() {
-		System.out.println("¸Þ¼¼Áö >>> " + msg);
+		System.out.println("ë©”ì„¸ì§€ >>> " + msg);
 	}
 }

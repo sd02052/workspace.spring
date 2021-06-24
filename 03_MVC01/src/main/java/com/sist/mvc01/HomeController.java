@@ -1,4 +1,4 @@
-package com.sist.mvc01;
+ï»¿package com.sist.mvc01;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -32,24 +32,24 @@ public class HomeController {
 		String formattedDate = dateFormat.format(date);
 		
 		model.addAttribute("serverTime", formattedDate );
-		model.addAttribute("hello", "¾È³çÇÏ¼¼¿ä? ½ºÇÁ¸µ¿¡ ¿À½Å°É È¯¿µÇÕ´Ï´Ù.");
+		model.addAttribute("hello", "ì•ˆë…•í•˜ì„¸ìš”? ìŠ¤í”„ë§ì— ì˜¤ì‹ ê±¸ í™˜ì˜í•©ë‹ˆë‹¤.");
 		
 		return "home";
 	}
 	
 	/*
-	 * ½ºÇÁ¸µ MVC¿¡¼­ Model(¸ğµ¨)?
-	 * - ÄÁÆ®·Ñ·¯¿¡ ÀÇÇØ¼­ ºñÁö´Ï½º ·ÎÁ÷ÀÌ ¼öÇàÀÌ µÇ°í ³ª¸é
-	 *   ´ëÃ¼ÀûÀ¸·Î view page¿¡ º¸¿©Áú Á¤º¸µéÀÌ ¸¸µé¾îÁü.
-	 *   ÀÌ·¯ÇÑ Á¤º¸µéÀ» ½ºÇÁ¸µ¿¡¼­´Â Model(¸ğµ¨)ÀÌ¶ó°í ÇÔ.
-	 *   ÀÌ Model(Á¤º¸)À» view page·Î º¸³»°Ô µÊ.
+	 * ìŠ¤í”„ë§ MVCì—ì„œ Model(ëª¨ë¸)?
+	 * - ì»¨íŠ¸ë¡¤ëŸ¬ì— ì˜í•´ì„œ ë¹„ì§€ë‹ˆìŠ¤ ë¡œì§ì´ ìˆ˜í–‰ì´ ë˜ê³  ë‚˜ë©´
+	 *   ëŒ€ì²´ì ìœ¼ë¡œ view pageì— ë³´ì—¬ì§ˆ ì •ë³´ë“¤ì´ ë§Œë“¤ì–´ì§.
+	 *   ì´ëŸ¬í•œ ì •ë³´ë“¤ì„ ìŠ¤í”„ë§ì—ì„œëŠ” Model(ëª¨ë¸)ì´ë¼ê³  í•¨.
+	 *   ì´ Model(ì •ë³´)ì„ view pageë¡œ ë³´ë‚´ê²Œ ë¨.
 	 */
 	
 	@RequestMapping("/memberInfo")
 	public String member(Model model) {
-		model.addAttribute("name", "È«±æµ¿");
+		model.addAttribute("name", "í™ê¸¸ë™");
 		model.addAttribute("age", 27);
-		model.addAttribute("addr", "°æ±âµµ °í¾ç½Ã ÀÏ»êµ¿±¸");
+		model.addAttribute("addr", "ê²½ê¸°ë„ ê³ ì–‘ì‹œ ì¼ì‚°ë™êµ¬");
 		return "member";
 	}
 }

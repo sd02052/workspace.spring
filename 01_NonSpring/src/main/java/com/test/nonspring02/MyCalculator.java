@@ -1,4 +1,4 @@
-package com.test.nonspring02;
+ï»¿package com.test.nonspring02;
 
 public class MyCalculator {
 
@@ -6,12 +6,12 @@ public class MyCalculator {
 	private int secondNum;
 	private Calculator calculator;
 
-	// ±âº» »ý¼ºÀÚ
+	// ê¸°ë³¸ ìƒì„±ìž
 	public MyCalculator() {
 
 	}
 
-	// ÀÎÀÚ »ý¼ºÀÚ
+	// ì¸ìž ìƒì„±ìž
 	public MyCalculator(int firstNum, int secondNum, Calculator calculator) {
 		this.firstNum = firstNum;
 		this.secondNum = secondNum;
@@ -42,7 +42,7 @@ public class MyCalculator {
 		this.calculator = calculator;
 	}
 
-	// ºñÁö´Ï½º ·ÎÁ÷
+	// ë¹„ì§€ë‹ˆìŠ¤ ë¡œì§
 	public void result() {
 		int value = calculator.sum(firstNum, secondNum);
 		System.out.println("result >>> " + value);

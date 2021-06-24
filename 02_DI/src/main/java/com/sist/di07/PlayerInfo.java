@@ -1,4 +1,4 @@
-package com.sist.di07;
+ï»¿package com.sist.di07;
 
 import lombok.Data;
 
@@ -7,10 +7,10 @@ public class PlayerInfo {
 	private Player player;
 
 	public void getPlayerInfo() {
-		System.out.println("ÀÌ¸§: " + player.getName());
-		System.out.println("³ªÀÌ: " + player.getAge());
-		System.out.println("Æ÷Áö¼Ç: " + player.getPosition());
-		System.out.println("Ã¼Áß: " + player.getWeight());
-		System.out.println("Å°: " + player.getHeight());
+		System.out.println("ì´ë¦„: " + player.getName());
+		System.out.println("ë‚˜ì´: " + player.getAge());
+		System.out.println("í¬ì§€ì…˜: " + player.getPosition());
+		System.out.println("ì²´ì¤‘: " + player.getWeight());
+		System.out.println("í‚¤: " + player.getHeight());
 	}
 }

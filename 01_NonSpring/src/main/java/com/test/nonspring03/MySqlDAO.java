@@ -1,14 +1,14 @@
-package com.test.nonspring03;
+ï»¿package com.test.nonspring03;
 
 public class MySqlDAO implements DAO {
 
 	public MySqlDAO() {
-		System.out.println("MySqlDAO »ı¼ºÀÚ ÀÔ´Ï´Ù.");
+		System.out.println("MySqlDAO ìƒì„±ì ì…ë‹ˆë‹¤.");
 	}
 
 	@Override
 	public void add() {
-		System.out.println("MySqlDAO ÀÔ´Ï´Ù...");
+		System.out.println("MySqlDAO ì…ë‹ˆë‹¤...");
 	}
 
 }

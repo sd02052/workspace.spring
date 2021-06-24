@@ -1,10 +1,10 @@
-package com.sist.di02;
+ï»¿package com.sist.di02;
 
 public class ExamDAOImpl implements ExamDAO {
 
 	@Override
 	public void printMsg() {
-		System.out.println("ExamDAOImpl ÇÃ·¡½ºÀÇ printMsg");
+		System.out.println("ExamDAOImpl í”Œë˜ìŠ¤ì˜ printMsg");
 	}
 
 }

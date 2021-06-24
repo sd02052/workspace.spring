@@ -1,4 +1,4 @@
-package com.sist.di08;
+ï»¿package com.sist.di08;
 
 import java.util.Map;
 import java.util.Set;
@@ -11,9 +11,9 @@ import lombok.NoArgsConstructor;
 public class MapTest {
 	private Map<Integer, String> map;
 
-	// ºñÁö´Ï½º ·ÎÁ÷
+	// ë¹„ì§€ë‹ˆìŠ¤ ë¡œì§
 	public void output() {
-		// keySet() : Map¿¡ ÀÖ´Â Å°¸¦ ÀüºÎ ´Ù °¡Á®¿È.
+		// keySet() : Mapì— ìˆëŠ” í‚¤ë¥¼ ì „ë¶€ ë‹¤ ê°€ì ¸ì˜´.
 		Set<Integer> set = map.keySet();
 		for (Integer k : set) {
 			System.out.println(map.get(k));

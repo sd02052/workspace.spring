@@ -1,5 +1,5 @@
-package com.sist.di03;
+ï»¿package com.sist.di03;
 
 public interface DAO {
-	void add(); // Ãß»ó ¸Ş¼­µå
+	void add(); // ì¶”ìƒ ë©”ì„œë“œ
 }

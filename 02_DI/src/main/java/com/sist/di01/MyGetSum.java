@@ -1,4 +1,4 @@
-package com.sist.di01;
+ï»¿package com.sist.di01;
 
 public class MyGetSum {
 
@@ -30,7 +30,7 @@ public class MyGetSum {
 		this.getSum = getSum;
 	}
 
-	// ÇÙ½É ±â´É
+	// í•µì‹¬ ê¸°ëŠ¥
 	public void sum() {
 		this.getSum.hap(su1, su2);
 	}

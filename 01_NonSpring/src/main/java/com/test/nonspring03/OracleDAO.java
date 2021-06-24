@@ -1,14 +1,14 @@
-package com.test.nonspring03;
+ï»¿package com.test.nonspring03;
 
 public class OracleDAO implements DAO {
 
 	public OracleDAO() {
-		System.out.println("OracleDAO »ı¼ºÀÚ ÀÔ´Ï´Ù.");
+		System.out.println("OracleDAO ìƒì„±ì ì…ë‹ˆë‹¤.");
 	}
 
 	@Override
 	public void add() {
-		System.out.println("OracleDAO ÀÔ´Ï´Ù...");
+		System.out.println("OracleDAO ì…ë‹ˆë‹¤...");
 	}
 
 }

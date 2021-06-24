@@ -1,7 +1,7 @@
-package com.test.nonspring02;
+ï»¿package com.test.nonspring02;
 
 public interface Calculator {
 	
-	int sum(int firstNum, int secondNum); // Ãß»ó¸Ş¼­µå
+	int sum(int firstNum, int secondNum); // ì¶”ìƒë©”ì„œë“œ
 	
 }

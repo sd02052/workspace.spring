@@ -1,4 +1,4 @@
-package com.sist.di05;
+ï»¿package com.sist.di05;
 
 public class PersonInfo {
 	private Person person;
@@ -12,10 +12,10 @@ public class PersonInfo {
 
 	public void getPersonInfo() {
 		if (person != null) {
-			System.out.println("ÀÌ¸§: " + person.getName());
-			System.out.println("¼ºº°: " + person.getGender());
-			System.out.println("³ªÀÌ: " + person.getAge());
-			System.out.println("ÁÖ¹Î¹øÈ£: " + person.getJuminNo());
+			System.out.println("ì´ë¦„: " + person.getName());
+			System.out.println("ì„±ë³„: " + person.getGender());
+			System.out.println("ë‚˜ì´: " + person.getAge());
+			System.out.println("ì£¼ë¯¼ë²ˆí˜¸: " + person.getJuminNo());
 		}
 	}
 }
