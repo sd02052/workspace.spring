@@ -62,7 +62,10 @@
 				<td colspan="2" align="center">
 					<input type="button" value="제품수정" onclick="location.href='product_modify.do?pnum=${dto.getPnum() }'">
 					&nbsp;&nbsp;
-					<input type="button" value="제품삭제" onclick="location.href='product_delete.do?pnum=${dto.getPnum() }'">
+					<input type="button" value="제품삭제" 
+					onclick="if(confirm('삭제 하시겠습니까?')) {
+							location.href='product_delete.do?pnum=${dto.getPnum() }'}
+							else {return;}">
 					&nbsp;&nbsp;
 					<input type="button" value="제품목록" onclick="location.href='product_list.do'">
 				</td>
@@ -71,3 +74,12 @@
 	</div>
 </body>
 </html>
+<%--
+	자바 스크립트에서 window 객체의 하위에 있는 confirm() 메서드는 
+	확인 / 취소 버튼을 가진 경고창을 만들어 주는 메서드임.
+	확인 버튼을 클릭하면 반환값으로 true를 리턴하고, 취소 버튼을 클릭하면
+	반환값으로 false 값을 리턴함. 즉, 삭제 유무를 다시 한 번 확인하기 위해서
+	주로 사용이 됨.
+	따라서 확인 버튼을 클릭하면 product_delete.do로 넘어가고, 취소 버튼을
+	클릭하면 삭제를 안하고 그대로 현재 창에 있게 만드는 코드임.
+--%>

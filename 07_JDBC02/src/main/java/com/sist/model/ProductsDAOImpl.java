@@ -93,11 +93,11 @@ public class ProductsDAOImpl implements ProductsDAO {
 
 	@Override
 	public int updateProduct(final ProductsDTO dto) {
-		
+
 		sql = "update products set input_price = ?, output_price = ?, trans_cost = ?, mileage = ? where pnum = ?";
-		
+
 		return this.template.update(sql, new PreparedStatementSetter() {
-			
+
 			@Override
 			public void setValues(PreparedStatement ps) throws SQLException {
 				ps.setInt(1, dto.getInput_price());
@@ -110,9 +110,17 @@ public class ProductsDAOImpl implements ProductsDAO {
 	}
 
 	@Override
-	public int deleteProduct(int pnum) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int deleteProduct(final int pnum) {
+
+		sql = "delete from products where pnum = ?";
+
+		return this.template.update(sql, new PreparedStatementSetter() {
+
+			@Override
+			public void setValues(PreparedStatement ps) throws SQLException {
+				ps.setInt(1, pnum);
+			}
+		});
 	}
 
 	@Override
@@ -133,6 +141,52 @@ public class ProductsDAOImpl implements ProductsDAO {
 				return dto;
 			}
 		});
+	}
+
+	@Override
+	public List<ProductsDTO> searchProductList(String field, String keyword) {
+		List<ProductsDTO> searchList = null;
+
+		if (field.equals("product_name")) {
+			sql = "select * from products where products_name like ? order by pnum desc";
+			searchList = this.template.query(sql, new RowMapper<ProductsDTO>() {
+
+				@Override
+				public ProductsDTO mapRow(ResultSet rs, int rowNum) throws SQLException {
+					ProductsDTO dto = new ProductsDTO();
+					dto.setPnum(rs.getInt("pnum"));
+					dto.setCategory_fk(rs.getString("category_fk"));
+					dto.setProducts_name(rs.getString("products_name"));
+					dto.setEp_code_fk(rs.getString("ep_code_fk"));
+					dto.setInput_price(rs.getInt("input_price"));
+					dto.setOutput_price(rs.getInt("output_price"));
+					dto.setTrans_cost(rs.getInt("trans_cost"));
+					dto.setMileage(rs.getInt("mileage"));
+					dto.setCompany(rs.getString("company"));
+					return dto;
+				}
+			}, "%" + keyword + "%");
+		} else {
+			sql = "select * from products where company like ? order by pnum desc";
+			searchList = this.template.query(sql, new RowMapper<ProductsDTO>() {
+
+				@Override
+				public ProductsDTO mapRow(ResultSet rs, int rowNum) throws SQLException {
+					ProductsDTO dto = new ProductsDTO();
+					dto.setPnum(rs.getInt("pnum"));
+					dto.setCategory_fk(rs.getString("category_fk"));
+					dto.setProducts_name(rs.getString("products_name"));
+					dto.setEp_code_fk(rs.getString("ep_code_fk"));
+					dto.setInput_price(rs.getInt("input_price"));
+					dto.setOutput_price(rs.getInt("output_price"));
+					dto.setTrans_cost(rs.getInt("trans_cost"));
+					dto.setMileage(rs.getInt("mileage"));
+					dto.setCompany(rs.getString("company"));
+					return dto;
+				}
+			}, "%" + keyword + "%");
+		}
+		return searchList;
 	}
 
 }

@@ -15,4 +15,6 @@ public interface ProductsDAO {
 	int deleteProduct(int pnum);
 
 	List<CategoryDTO> getCategoryList();
+
+	List<ProductsDTO> searchProductList(String field, String keyword);
 }

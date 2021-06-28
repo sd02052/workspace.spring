@@ -111,4 +111,40 @@ public class ProductsController {
 			out.println("</script>");
 		}
 	}
+
+	@RequestMapping("/product_delete.do")
+	public void delete(@RequestParam("pnum") int pnum, HttpServletResponse response) throws IOException {
+		response.setContentType("text/html; charset=UTF-8");
+
+		int result = this.dao.deleteProduct(pnum);
+
+		PrintWriter out = response.getWriter();
+
+		if (result > 0) {
+			out.println("<script>");
+			out.println("alert('제품 삭제 성공')");
+			out.println("location.href='product_list.do'");
+			out.println("</script>");
+		} else {
+			out.println("<script>");
+			out.println("alert('제품 삭제 실패')");
+			out.println("history.back()");
+			out.println("</script>");
+		}
+	}
+
+	@RequestMapping("/product_search.do")
+	public ModelAndView search(@RequestParam("field") String field, @RequestParam("name") String keyword) {
+
+		List<ProductsDTO> list = this.dao.searchProductList(field, keyword);
+
+		ModelAndView mav = new ModelAndView();
+
+		mav.addObject("searchList", list);
+
+		mav.setViewName("product_search");
+
+		return mav;
+
+	}
 }
