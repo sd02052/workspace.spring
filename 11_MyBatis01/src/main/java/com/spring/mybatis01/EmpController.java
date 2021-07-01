@@ -73,4 +73,61 @@ public class EmpController {
 
 		return "emp_cont";
 	}
+
+	@RequestMapping("/emp_update.do")
+	public String update(@RequestParam("empno") int empno, Model model) {
+
+		EmpDTO dto = this.dao.getCont(empno);
+		List<DeptDTO> deptList = this.dao.getDeptList();
+		List<EmpDTO> mgrList = this.dao.getMgrList();
+
+		model.addAttribute("cont", dto);
+		model.addAttribute("deptList", deptList);
+		model.addAttribute("mgrList", mgrList);
+
+		return "emp_update";
+	}
+
+	@RequestMapping("/emp_update_ok.do")
+	public void updateOk(EmpDTO dto, HttpServletResponse response) throws IOException {
+		response.setContentType("text/html; charset=UTF-8");
+
+		int result = this.dao.updateEmp(dto);
+
+		PrintWriter out = response.getWriter();
+
+		if (result > 0) {
+			out.println("<script>");
+			out.println("alert('사원 정보 수정 성공')");
+			out.println("location.href='emp_cont.do?empno=" + dto.getEmpno() + "'");
+			out.println("</script>");
+		} else {
+			out.println("<script>");
+			out.println("alert('사원 정보 수정 실패')");
+			out.println("hisotry.back()");
+			out.println("</script>");
+		}
+	}
+
+	@RequestMapping("/emp_delete.do")
+	public void delete(@RequestParam("empno") int empno, HttpServletResponse response) throws IOException {
+		response.setContentType("text/html; charset=UTF-8");
+
+		int result = this.dao.deleteEmp(empno);
+
+		PrintWriter out = response.getWriter();
+
+		if (result > 0) {
+			out.println("<script>");
+			out.println("alert('사원 삭제 성공')");
+			out.println("location.href='emp_list.do'");
+			out.println("</script>");
+		} else {
+			out.println("<script>");
+			out.println("alert('사원 삭제 실패')");
+			out.println("hisotry.back()");
+			out.println("</script>");
+		}
+	}
+
 }

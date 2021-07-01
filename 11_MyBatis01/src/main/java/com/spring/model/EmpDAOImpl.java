@@ -45,14 +45,14 @@ public class EmpDAOImpl implements EmpDAO {
 
 	@Override
 	public int updateEmp(EmpDTO dto) {
-		// TODO Auto-generated method stub
-		return 0;
+
+		return this.sqlSession.update("update", dto);
 	}
 
 	@Override
 	public int deleteEmp(int empno) {
-		// TODO Auto-generated method stub
-		return 0;
+
+		return this.sqlSession.delete("delete", empno);
 	}
 
 }

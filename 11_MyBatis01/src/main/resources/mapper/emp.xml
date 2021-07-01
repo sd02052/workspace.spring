@@ -6,19 +6,33 @@
 <!-- namespace 명은 패키지 포함해서 인터페이스 이름으로 작성을 해줘야 함.
 	 namespace는 mapper들을 구분하는 식별자로 매우 중요함. -->
 <mapper namespace="com.spring.model.EmpDAO">
+
 	<select id="allList" resultType="com.spring.model.EmpDTO">
 		select * from emp order by empno
 	</select>
+	
 	<select id="deptList" resultType="com.spring.model.DeptDTO">
 		select * from dept order by deptno
 	</select>
+	
 	<select id="mgrList" resultType="com.spring.model.EmpDTO">
 		select * from emp where job = 'MANAGER' order by empno
 	</select>
+	
 	<insert id="add" parameterType="com.spring.model.EmpDTO">
 		insert into emp values(#{empno}, #{ename}, #{job}, #{mgr}, sysdate, #{sal}, #{comm}, #{deptno})
 	</insert>
-	<select id="cont" resultType="com.spring.model.EmpDTO">
+	
+	<select id="cont" parameterType="int" resultType="com.spring.model.EmpDTO">
 		select * from emp where empno = #{empno}
 	</select>
+	
+	<update id="update" parameterType="com.spring.model.EmpDTO">
+		update emp set job = #{job}, mgr = #{mgr}, sal = #{sal}, comm = #{comm}, deptno = #{deptno}
+		where empno = #{empno}
+	</update>
+	
+	<delete id="delete" parameterType="int">
+		delete from emp where empno = #{empno}
+	</delete>
 </mapper>
