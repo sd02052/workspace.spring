@@ -56,7 +56,7 @@ public class ProductController {
 		} else {
 			out.println("<script>");
 			out.println("alert('제품 등록 실패')");
-			out.println("hisotry.back()");
+			out.println("history.back()");
 			out.println("</script>");
 		}
 	}
@@ -99,7 +99,7 @@ public class ProductController {
 		} else {
 			out.println("<script>");
 			out.println("alert('제품 수정 실패')");
-			out.println("hisotry.back()");
+			out.println("history.back()");
 			out.println("</script>");
 		}
 	}
@@ -122,7 +122,7 @@ public class ProductController {
 		} else {
 			out.println("<script>");
 			out.println("alert('제품 삭제 실패')");
-			out.println("hisotry.back()");
+			out.println("history.back()");
 			out.println("</script>");
 		}
 	}

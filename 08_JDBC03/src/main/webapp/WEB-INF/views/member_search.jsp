@@ -15,7 +15,7 @@
 		<hr width="50%" color="pink">
 		<br> <br>
 		
-		<table border="1" cellspacing="0" widht="450">
+		<table border="1" cellspacing="0" width="450">
 			<tr>
 				<th>회원번호</th>
 				<th>회원명</th>
