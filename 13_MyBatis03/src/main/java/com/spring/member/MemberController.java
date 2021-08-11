@@ -29,7 +29,7 @@ public class MemberController {
 
 		return "member_list";
 	}
-
+	
 	@RequestMapping("member_insert.do")
 	public String insert() {
 		return "member_insert";
